@@ -19,6 +19,7 @@ const NUM_REPAIRERS_CONTAINER = 1;
 const NUM_HAULERS = 5;
 const NUM_DEFENDERS = 3;
 
+// need to change this to be dynamic
 var towers = ["006b7e85f19f6fe", "66c5eb4b240140b"];
 
 module.exports.loop = function () {
