@@ -22,6 +22,14 @@ var roleDefender = {
   },
   spawn: function (room) {
     //do we need to spawn a defender?
+    var currentDefenders = _.filter(
+      Game.creeps,
+      (creep) => creep.memory.role == "defender"
+    );
+
+    if (currentDefenders.length < NUM_DEFENDERS) {
+      return true;
+    }
   },
   spawnData: function (room, type) {
     let name = type + " -Defender(" + Game.time + ")[" + room.name + "]";
